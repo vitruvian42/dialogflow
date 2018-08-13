@@ -21,8 +21,8 @@ restService.post("/echo", function(req, res) {
       ? req.body.result.parameters.echoText
       : "Seems like some problem. Speak again.";
   return res.json({
-    speech: "Thank you for talking to HDFC Life. Our agent will talk to you soon",
-    displayText: "Thank you for talking to HDFC Life. Our agent will talk to you soon",
+    speech: "Thank you for talking to HDFC Life. Our agent will contact you soon",
+    displayText: "Thank you for talking to HDFC Life. Our agent will contact you soon",
     source: "HDFC-Life-Bot"
   });
 });
