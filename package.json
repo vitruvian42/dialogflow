@@ -1,0 +1,14 @@
+{
+  "name": "HDFC-Life-Lead",
+  "version": "1.0.0",
+  "description": "HDFC Life Google Assistant Example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Gauraw Mishra",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4"
+  }
+}
