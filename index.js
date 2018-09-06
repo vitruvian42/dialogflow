@@ -27,7 +27,7 @@ process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
 const app = dialogflow({debug: true});
 
 
-console.log(bodyParser.json())
+console.log(bodyParser.json().Conversation)
 
 
 
