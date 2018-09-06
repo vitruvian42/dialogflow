@@ -1,6 +1,11 @@
 // See https://github.com/dialogflow/dialogflow-fulfillment-nodejs
 // for Dialogflow fulfillment library docs, samples, and to report issues
 'use strict';
+
+const express = require("express");
+const bodyParser = require("body-parser");
+
+const restService = express();
  
 const functions = require('firebase-functions');
 const { WebhookClient } = require('dialogflow-fulfillment');
@@ -315,3 +320,7 @@ app.intent('optionResponse', (conv, params, option) => {
 });
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
+
+restService.listen(80, function() {
+ console.log(“Server up and listening”);
+});
