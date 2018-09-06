@@ -26,6 +26,11 @@ process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
 
 const app = dialogflow({debug: true});
 
+
+console.log(bodyParser.json())
+
+
+
 app.intent('test',(conv)=>{
  conv.ask(new SimpleResponse({
      speech: 'Thank you for your interest! Our representative will contact you shortly.',
