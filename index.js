@@ -4,8 +4,6 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-
-const restService = express();
  
 const functions = require('firebase-functions');
 const { WebhookClient } = require('dialogflow-fulfillment');
@@ -319,8 +317,8 @@ app.intent('optionResponse', (conv, params, option) => {
     }
 });
 
-exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
+//exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
 
-restService.listen(80, function() {
- console.log(“Server up and listening”);
-});
+express().use(bodyParser.json(), app).listen(80, function () {
+     console.info('Test agent webhook listening on port 80!')
+ });
